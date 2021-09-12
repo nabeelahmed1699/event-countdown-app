@@ -47,6 +47,8 @@ body {
 
 .event-img {
     height: 75vh;
+    width: 90%;
+    max-width: 700px;
 }
 
 .form {
