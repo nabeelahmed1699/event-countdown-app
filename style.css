@@ -127,11 +127,17 @@ body {
     left: 50%;
 }
 
+.github-visit {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+}
+
 @media (max-width: 470px) {
     .title {
         font-size: 3rem;
     }
     .event-img {
-        height: 15vh;
+        height: 54vh;
     }
 }
