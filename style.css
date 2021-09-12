@@ -131,4 +131,7 @@ body {
     .title {
         font-size: 3rem;
     }
+    .event-img {
+        height: 20vh;
+    }
 }
