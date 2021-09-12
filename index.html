@@ -21,6 +21,7 @@
 <body>
     <div class="countdown-container flex">
         <h1 class="title">Time remaining to my birthday!</h1>
+        <a class="btn open-btn">Set my event</a>
         <div class="countdown flex">
             <div class="time">
                 <h2 class="day">time</h2>
@@ -41,6 +42,19 @@
         </div>
         <img class="event-img" src="./undraw_date_picker_gorr.svg" alt="Event Illustration">
     </div>
+    <form action="post" class="form">
+        <a href='#' class="close-btn">X</a>
+        <h3>Input your event</h3>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+        </div>
+        <div>
+            <label for="time">Time:</label>
+            <input type="time" id="time">
+        </div>
+        <button class="btn">Submit</button>
+    </form>
     <script src="./script.js"></script>
 </body>
 
