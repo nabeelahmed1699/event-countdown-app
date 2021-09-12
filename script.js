@@ -4,27 +4,20 @@ const MINUTE = document.querySelector('.minute');
 const SECOND = document.querySelector('.second');
 const DATE = document.querySelector('#date');
 const TIME = document.querySelector('#time');
-const SUBMIT_BTN = document.querySelector('.btn');
+const SUBMIT_BTN = document.querySelector('.submit');
 const OPEN_BTN = document.querySelector('.open-btn');
 const CLOSE_BTN = document.querySelector('.close-btn');
 const FORM = document.querySelector('.form');
+const TITLE = document.querySelector('.title');
+const TITLE_INPUT = document.querySelector('#titleInput');
 
 
 
 SUBMIT_BTN.addEventListener('click', setEvent);
 
+OPEN_BTN.addEventListener('click', openForm)
 
-OPEN_BTN.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log('open btn clicked');
-    FORM.classList.add('display-form');
-})
-
-
-CLOSE_BTN.addEventListener('click', (event) => {
-    event.preventDefault();
-    FORM.classList.remove('display-form');
-})
+CLOSE_BTN.addEventListener('click', closeForm)
 
 
 // By default set my birthday 
@@ -36,7 +29,7 @@ doSetInterval(myBirthday);
 function setEvent(event) {
 
     event.preventDefault();
-    console.log('Here im a');
+
     let dateInput = DATE.value;
     let timeInput = TIME.value;
 
@@ -57,11 +50,13 @@ function setEvent(event) {
 
     let newEvent = `${month} ${date},${year}, ${hours}:${minutes}:00`;
 
-
+    TITLE.innerText = TITLE_INPUT.value;
     // Clears the previos interval from the window
     clearInterval(intervalID);
     // set new interval
     doSetInterval(newEvent);
+    // closing form after event has set
+    closeForm();
 }
 
 
@@ -157,4 +152,12 @@ function convertMonth(month) {
             break;
     }
     return newMonth;
+}
+
+function openForm() {
+    FORM.classList.add('display-form');
+}
+
+function closeForm() {
+    FORM.classList.remove('display-form');
 }

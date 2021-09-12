@@ -95,6 +95,15 @@ body {
     font-weight: 600;
 }
 
+.form div input {
+    padding: 3px 2px;
+    border: 1px solid aliceblue;
+}
+
+.form div input:focus {
+    outline: 2px solid aliceblue;
+}
+
 .btn {
     padding: 0.4em 0.8em;
     font-size: 21px;
