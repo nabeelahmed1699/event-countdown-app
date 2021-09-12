@@ -138,6 +138,14 @@ body {
         font-size: 3rem;
     }
     .event-img {
-        height: 54vh;
+        height: 40vh;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 570px) {
+    .event-img {
+        height: 50vh;
+        margin-left: 10px;
     }
 }
